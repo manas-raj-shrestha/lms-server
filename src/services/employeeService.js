@@ -23,7 +23,19 @@ export function getAllEmployees() {
  * @return {Promise}
  */
 export function getEmployee(id) {
+  console.log('here');
+
   return new Employee({ id }).fetch({ withRelated: ['roles', 'designation', 'projects'] }).then(employee => {
+    if (!employee) {
+      throw new Boom.notFound('employee not found');
+    }
+
+    return employee;
+  });
+}
+
+export function getEmployeeByEmail(email) {
+  return new Employee({ email }).fetch().then(employee => {
     if (!employee) {
       throw new Boom.notFound('employee not found');
     }

@@ -33,6 +33,7 @@ export function up(knex) {
     table.string('phone');
     table.string('gender');
     table.string('address');
+    table.integer('reset_code');
   });
 }
 
