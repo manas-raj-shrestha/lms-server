@@ -23,6 +23,8 @@ let mailOptions = {
 };
 
 router.post('/', (req, res, next) => {
+  console.log(email, password);
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error);
