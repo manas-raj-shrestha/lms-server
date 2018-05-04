@@ -21,18 +21,9 @@
     "test:coverage": "NODE_ENV=test nyc --require babel-register --reporter lcov --reporter text mocha --recursive test"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"]
   },
-  "keywords": [
-    "javascript",
-    "node",
-    "express",
-    "es6",
-    "api"
-  ],
+  "keywords": ["javascript", "node", "express", "es6", "api"],
   "private": true,
   "author": "Saugat Acharya <mesaugat@gmail.com>",
   "license": "MIT",
@@ -46,6 +37,7 @@
     "cors": "^2.8.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
+    "express-fileupload": "^0.4.0",
     "fcm-node": "^1.2.1",
     "helmet": "^3.6.1",
     "http-status-codes": "^1.1.6",
@@ -81,7 +73,7 @@
     "supertest": "^3.0.0"
   },
   "engines": {
-    "node": ">= 6.9.0",
+    "node": "7.10.0",
     "npm": ">= 3.10.8"
   }
 }
