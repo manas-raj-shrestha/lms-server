@@ -46,6 +46,7 @@
     "cors": "^2.8.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
+    "fcm-node": "^1.2.1",
     "helmet": "^3.6.1",
     "http-status-codes": "^1.1.6",
     "joi": "^11.0.1",

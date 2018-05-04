@@ -28,4 +28,11 @@ router.post('/forgotpassword', (req, res, next) => {
     .catch(err => next(err));
 });
 
+router.post('/resetpassword', (req, res, next) => {
+  authService
+    .resetPassword(req.body)
+    .then(data => res.json({ data }))
+    .catch(err => next(err));
+});
+
 export default router;
